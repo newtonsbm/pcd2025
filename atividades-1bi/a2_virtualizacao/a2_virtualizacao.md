@@ -5,7 +5,7 @@
 - Instalar VirtualBox
 - Instalar uma distro linux leve
     - Versão com interface: puppylinux, damn small linux, antix linux ou outra bem leve
-    - Versão para servidor: debian server
+    - Versão para servidor: alpine linux (extended version), debian server, ubuntu server (pesado)
 - Tirar um print e salvar no repositorio com o nome "virtualbox.jpg" na pasta a2_virtualizacao
 - Comitar e subir
 
@@ -36,7 +36,7 @@
 
 - Instalar django e inicar projeto
 `pip install django`
-`python3 -m django start_project teste`
+`python3 -m django startproject teste`
 
 - Entrar na pasta e iniciar o servidor
 `cd teste`
