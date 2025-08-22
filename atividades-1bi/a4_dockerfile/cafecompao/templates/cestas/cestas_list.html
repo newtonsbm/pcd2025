@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lista de Cestas{% endblock %}
+
+{% block content %}
+  <!-- INICIO DO HERO -->
+  <div class="hero min-h-[70vh]" style="background-image: url({% static 'images/padaria2.png' %});">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-2xl">
+        <h1 class="mb-5 text-5xl font-bold">Cestas incríveis para TODOS os gostos!</h1>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO HERO -->
+  <!-- INICIO DO MAIN HOME -->
+  <main class="max-w-4xl mx-auto my-20">
+    <h1 class="text-4xl">Nossas Cestas</h1>
+    <section class="my-10 flex gap-5 flex-wrap justify-center">
+      {% for cesta in cestas %}
+        <div class="card bg-base-100 w-70 shadow-sm">
+          <figure>
+            <img class="aspect-video" src="{{ cesta.imagem.url }}" alt="{{ cesta.nome }}" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">{{ cesta.nome }}</h2>
+            <p>{{ cesta.descricao }}</p>
+            <div class="card-actions justify-end">
+              <a href="{% url 'cestas_detail' cesta.pk %}" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  </main>
+  <!-- FIM DO MAIN HOME -->
+{% endblock %}

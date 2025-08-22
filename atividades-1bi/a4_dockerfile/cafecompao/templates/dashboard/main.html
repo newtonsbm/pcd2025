@@ -1,0 +1,21 @@
+{% extends 'dashboard/base_logged.html' %}
+{% load static %}
+
+{% block dashboard_content %}
+  <h1 class="text-4xl mb-4">Bem-vindo à sua conta</h1>
+  <p class="mb-6">Aqui você pode gerenciar suas informações e assinaturas.</p>
+  <section>
+    <h2 class="text-2xl mb-2">Informações do Usuário</h2>
+    <p><strong>Nome:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+  </section>
+  <section class="mt-6">
+    <h2 class="text-2xl mb-2">Assinatura Atual</h2>
+    {% if user.assinatura %}
+      <p><strong>Plano:</strong> {{ user.assinatura.cesta.nome }}</p>
+      <p><strong>Data de Início:</strong> {{ user.assinatura.data_inicio }}</p>
+    {% else %}
+      <p>Você ainda não tem uma assinatura ativa</p>
+    {% endif %}
+  </section>
+{% endblock %}

@@ -1,0 +1,40 @@
+<nav class="menu bg-base-200 w-56 p-4">
+  <ul>
+    <li>
+      <a href="{% url 'dashboard_main' %}">
+        <i class="bi bi-person"></i>
+        Minha Conta
+      </a>
+    </li>
+    {% if user.assinatura %}
+    <li>
+      <a href="">
+        <i class="bi bi-pencil-square"></i>
+        Alterar Assinatura
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <i class="bi bi-x-circle"></i>
+        Cancelar Assinatura
+      </a>
+    </li>
+    {% else %}
+    <li>
+      <a href="">
+        <i class="bi bi-credit-card"></i>
+        Assinatura
+      </a>
+    </li>
+    {% endif %}
+    <li>
+      <form action="{% url 'logout' %}" method="post" class="w-full block">
+        {% csrf_token %}
+        <button type="submit" class="w-full block text-left cursor-pointer">
+          <i class="bi bi-box-arrow-right mr-2"></i>
+          Sair
+        </button>
+      </form>
+    </li>
+  </ul>
+</nav>

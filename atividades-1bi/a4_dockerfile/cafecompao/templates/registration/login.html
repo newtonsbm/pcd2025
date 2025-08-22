@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login - Café com Pão{% endblock %}
+
+{% block content %}
+  <!-- INICIO DO HERO -->
+  <div class="hero bg-base-200 min-h-screen">
+    <div class="hero-content flex-col gap-20">
+      <div class="text-center lg:text-left shrink-0">
+        <h1 class="text-5xl font-bold">Acesse sua conta</h1>
+      </div>
+      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div class="card-body">
+          {% if form.errors %}
+          <div class="alert alert-error shadow-lg mb-4">
+            <span class="text-xs">
+              {% for field_errors in form.errors.values %}
+                {% for error in field_errors %}{{ error }} {% endfor %}
+              {% endfor %}
+            </span>
+          </div>
+          {% endif %}
+          <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <fieldset class="fieldset">
+              <legend class="fieldset-legend">Email</legend>
+              <label class="input">
+                <i class="bi bi-envelope opacity-50"></i>
+                <input type="email" name="username" required>
+              </label>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="fieldset-legend">Senha</legend>
+              <label class="input">
+                <i class="bi bi-lock opacity-50"></i>
+                <input type="password" name="password" required>
+              </label>
+            </fieldset>
+            <button class="btn btn-primary mt-4" type="submit">Entrar</button>
+            <a href="{% url 'register' %}" class="btn btn-secondary mt-4">Criar conta</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO HERO -->
+{% endblock %}

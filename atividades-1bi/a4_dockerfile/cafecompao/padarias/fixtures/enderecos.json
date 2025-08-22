@@ -1,0 +1,72 @@
+[
+    {
+        "model": "padarias.endereco",
+        "pk": 1,
+        "fields": {
+            "rua": "Rua Alegria",
+            "numero": "100",
+            "complemento": "Perto da praça",
+            "bairro": "Centro",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14010000",
+            "padaria": 1
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 2,
+        "fields": {
+            "rua": "Rua Sol Nascente",
+            "numero": "200",
+            "complemento": "Ao lado do mercado",
+            "bairro": "Jardim Paulista",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14020000",
+            "padaria": 2
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 3,
+        "fields": {
+            "rua": "Rua Pão Quente",
+            "numero": "300",
+            "complemento": "Próximo ao parque",
+            "bairro": "Vila Seixas",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14030000",
+            "padaria": 3
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 4,
+        "fields": {
+            "rua": "Rua Doce Vida",
+            "numero": "400",
+            "complemento": "Em frente à escola",
+            "bairro": "Sumarezinho",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14040000",
+            "padaria": 4
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 5,
+        "fields": {
+            "rua": "Rua Bom Dia",
+            "numero": "500",
+            "complemento": "Perto do hospital",
+            "bairro": "Jardim Botânico",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14050000",
+            "padaria": 5
+        }
+    }
+]
