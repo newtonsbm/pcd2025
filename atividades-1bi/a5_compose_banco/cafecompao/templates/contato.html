@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Café com Pão - Contato{% endblock %}
+
+{% block content %}
+  <!-- INICIO DO HERO -->
+  <div class="hero min-h-[70vh]" style="background-image: url({% static 'images/padaria2.png' %});">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-2xl">
+        <h1 class="mb-5 text-5xl font-bold">Venha nos Conhecer!</h1>
+        <p class="mb-5 text-xl">
+          Sua opinião é essencial para nós!
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO HERO -->
+  <!-- INICIO DO MAIN HOME -->
+  <!-- INICIO DO MAIN HOME -->
+  <main class="max-w-4xl mx-auto my-20 p-2">
+    {% if form_message %}
+      <div class="p-10 mb-4 text-green-800 bg-green-50 border-l-4 border-green-300 rounded-lg shadow-md" role="alert">
+        <h2 class="text-2xl font-bold">Muito Obrigado!</h2>
+        <p class="text-lg">{{ form_message }}</p>
+        <div class="text-center text-9xl">
+          🎉
+        </div>
+        <a class="btn mt-4" href="{% url 'contato' %}">Enviar nova mensagem</a>
+      </div>
+    {% else %}
+      <h1 class="text-4xl">Fale Conosco</h1>
+      <form action="{% url 'contato' %}" method="post" class="my-10">
+        {% csrf_token %}
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Qual seu nome?</legend>
+          <input type="text" class="input" name="name" placeholder="Digite aqui" required />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Qual seu email?</legend>
+          <input type="email" class="input" name="email" placeholder="Digite um email válido" required />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Qual seu telefone?</legend>
+          <input type="tel" class="input" name="phone" placeholder="Digite seu telefone" required />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Qual o assunto?</legend>
+          <input type="text" class="input" name="subject" placeholder="Digite o assunto" required />
+        </fieldset>
+        
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Qual a sua avaliação da nossa proposta?</legend>
+          <div class="rating">
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="1 star" value="1" required />
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="2 star" value="2"  required/>
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="3 star" value="3" required />
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="4 star" value="4" required />
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="5 star" value="5"  required/>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Mensagem</legend>
+          <textarea maxlength="512" class="textarea h-24" name="message" placeholder="Mensagem" required></textarea>
+        </fieldset>
+
+        <button class="btn btn-primary my-4">Enviar</button>
+      </form>
+    {% endif %}
+  </main>
+  <!-- FIM DO MAIN HOME -->
+  <!-- FIM DO MAIN HOME -->
+{% endblock %}
