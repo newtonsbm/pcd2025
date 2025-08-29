@@ -1,0 +1,11 @@
+services:
+  cafeblog:
+    image: cafecompao_blog:prod
+    build:
+      context: .
+      dockerfile: DockerfileProd
+    ports:
+      - 8080:80
+
+    
+

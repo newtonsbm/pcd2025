@@ -1,0 +1,12 @@
+FROM python:3-slim AS builder
+RUN mkdir /app
+COPY . /app
+WORKDIR /app
+RUN apt-get update 
+RUN apt-get install -y git
+RUN pip install pelican[markdown] git+https://github.com/arulrajnet/attila.git@master
+RUN pelican content -o output -s publishconf.py
+
+FROM nginx:1-alpine
+COPY --from=builder /app/output/ /usr/share/nginx/html
+

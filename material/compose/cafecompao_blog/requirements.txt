@@ -1,0 +1,2 @@
+pelican[markdown]
+git+https://github.com/arulrajnet/attila.git@master
