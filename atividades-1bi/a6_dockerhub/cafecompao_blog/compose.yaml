@@ -1,0 +1,10 @@
+services:
+  cafeblog:
+    image: newtonsbm/cafeblog_exemplo:latest
+    build: .
+    ports:
+      - 8080:80
+
+
+    
+

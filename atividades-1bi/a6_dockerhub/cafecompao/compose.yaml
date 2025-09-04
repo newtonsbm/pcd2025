@@ -1,0 +1,65 @@
+volumes:
+  bd_data: {} # volume para persistencia do banco de dados gerenciado pelo docker
+
+networks:
+  cafe_network: # rede customizada para comunicação entre containers
+
+services:
+
+  banco:
+    image: postgres:alpine
+    container_name: banco_postgres # nome fixo do container
+    hostname: banco # nome do host interno
+    restart: no # política de restart
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8" # argumentos de inicialização
+    volumes:
+      - bd_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro # script de inicialização
+    ports: 
+      - "5432:5432"
+    networks:
+      - cafe_network
+    healthcheck: # verificação de saúde do container
+      test: ["CMD-SHELL", "pg_isready -U user -d db"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+    labels: # metadados do container
+      - "app=cafecompao"
+      - "tier=database"
+
+  cafecompao:
+    build: 
+      context: . # local do dockerfile
+      dockerfile: Dockerfile # nome do dockerfile (padrão)
+      args: # argumentos de build (do dockerfile)
+        PYTHON_VERSION: 3.12
+    container_name: cafecompao
+    restart: no
+    ports:
+      - "3000:8000" # porta de origem para porta destino
+    volumes:
+      - .:/app # mapeamento de volume pasta origem : pasta destino
+    environment: # variaveis de ambiente do django
+      - POSTGRES_DB=db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST=banco
+      - POSTGRES_PORT=5432
+    depends_on: # depende do container
+      banco:
+        condition: service_healthy # aguarda o healthcheck
+    networks:
+      - cafe_network
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"] # comando
+    working_dir: /app # diretório de trabalho
+    stdin_open: true # mantém STDIN aberto
+    tty: true # aloca pseudo-TTY (terminal interativo)
+    labels:
+      - "app=cafecompao"
+      - "tier=web"
+

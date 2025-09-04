@@ -1,0 +1,38 @@
+<!-- INICIO DO NAVBAR SUPERIOR -->
+<header class="navbar bg-base-100 shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a href="{% url 'home' %}">Principal</a></li>
+        <li><a href="{% url 'padarias_list' %}">Padarias</a></li>
+        <li><a href="{% url 'cestas_list' %}">Cestas</a></li>
+        <li><a href="{% url 'contato' %}">Contato</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-xl"><i class="bi bi-cup-hot"></i> Café com Pão!</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="{% url 'home' %}">Principal</a></li>
+      <li><a href="{% url 'padarias_list' %}">Padarias</a></li>
+      <li><a href="{% url 'cestas_list' %}">Cestas</a></li>
+      <li><a href="{% url 'contato' %}">Contato</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    {% if user.is_authenticated %}
+      <a href="{% url 'dashboard_main' %}" class="btn">
+        <i class="bi bi-person-fill"></i>
+        <span>{{ user.first_name }} {{ user.last_name }}</span>
+      </a>
+    {% else %}
+      <a href="{% url 'login' %}" class="btn">Entrar</a>
+    {% endif %}
+  </div>
+</header>
+<!-- FIM DO NAVBAR SUPERIOR -->

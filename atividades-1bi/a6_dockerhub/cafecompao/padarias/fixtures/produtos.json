@@ -1,0 +1,242 @@
+[
+    {
+        "model": "padarias.produto",
+        "pk": 1,
+        "fields": {
+            "nome": "Maçã",
+            "descricao": "Maçã fresca e suculenta.",
+            "preco": "1.00",
+            "categoria": 1
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 2,
+        "fields": {
+            "nome": "Banana",
+            "descricao": "Banana madura e doce.",
+            "preco": "0.50",
+            "categoria": 1
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 3,
+        "fields": {
+            "nome": "Pera",
+            "descricao": "Pera fresca e suculenta.",
+            "preco": "1.00",
+            "categoria": 1
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 4,
+        "fields": {
+            "nome": "Abacaxi",
+            "descricao": "Abacaxi fresco e suculento.",
+            "preco": "2.00",
+            "categoria": 1
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 5,
+        "fields": {
+            "nome": "Melancia",
+            "descricao": "Melancia fresca e suculenta.",
+            "preco": "3.00",
+            "categoria": 1
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 6,
+        "fields": {
+            "nome": "Água Mineral",
+            "descricao": "Água mineral sem gás.",
+            "preco": "1.50",
+            "categoria": 2
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 7,
+        "fields": {
+            "nome": "Suco de Laranja",
+            "descricao": "Suco de laranja natural.",
+            "preco": "3.00",
+            "categoria": 2
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 8,
+        "fields": {
+            "nome": "Café Expresso",
+            "descricao": "Café expresso sem açúcar.",
+            "preco": "1.00",
+            "categoria": 2
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 9,
+        "fields": {
+            "nome": "Café com Leite",
+            "descricao": "Café com leite sem açúcar.",
+            "preco": "1.50",
+            "categoria": 2
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 10,
+        "fields": {
+            "nome": "Café com Leite e Açúcar",
+            "descricao": "Café com leite com açúcar.",
+            "preco": "2.00",
+            "categoria": 2
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 11,
+        "fields": {
+            "nome": "Pão Caseiro",
+            "descricao": "Pão Caseiro de leite .",
+            "preco": "0.50",
+            "categoria": 3
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 12,
+        "fields": {
+            "nome": "Pão Francês",
+            "descricao": "Pão francês fresco e crocante.",
+            "preco": "0.50",
+            "categoria": 3
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 13,
+        "fields": {
+            "nome": "Pão de Forma",
+            "descricao": "Pão de forma macio e saboroso.",
+            "preco": "3.00",
+            "categoria": 3
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 14,
+        "fields": {
+            "nome": "Pão Integral",
+            "descricao": "Pão integral saudável e nutritivo.",
+            "preco": "4.00",
+            "categoria": 3
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 15,
+        "fields": {
+            "nome": "Pão de Batata",
+            "descricao": "Pão de batata macio e saboroso.",
+            "preco": "2.00",
+            "categoria": 3
+        }
+    },
+      {
+        "model": "padarias.produto",
+        "pk": 16,
+        "fields": {
+            "nome": "Biscoito de Maizena",
+            "descricao": "Biscoito de maizena delicioso.",
+            "preco": "2.50",
+            "categoria": 5
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 17,
+        "fields": {
+            "nome": "Biscoito de Chocolate",
+            "descricao": "Biscoito de chocolate irresistível.",
+            "preco": "4.00",
+            "categoria": 5
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 18,
+        "fields": {
+            "nome": "Biscoito de Coco",
+            "descricao": "Biscoito de coco saboroso.",
+            "preco": "3.50",
+            "categoria": 5
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 19,
+        "fields": {
+            "nome": "Biscoito de Nata",
+            "descricao": "Biscoito de nata caseiro.",
+            "preco": "3.00",
+            "categoria": 5
+        }
+    },
+        {
+        "model": "padarias.produto",
+        "pk": 20,
+        "fields": {
+            "nome": "Coxinha",
+            "descricao": "Coxinha crocante e saborosa.",
+            "preco": "4.00",
+            "categoria": 4
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 21,
+        "fields": {
+            "nome": "Pastel",
+            "descricao": "Pastel frito na hora.",
+            "preco": "3.50",
+            "categoria": 4
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 22,
+        "fields": {
+            "nome": "Empada",
+            "descricao": "Empada de frango deliciosa.",
+            "preco": "3.00",
+            "categoria": 4
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 23,
+        "fields": {
+            "nome": "Pão de Queijo",
+            "descricao": "Pão de queijo fresco e delicioso.",
+            "preco": "2.00",
+            "categoria": 4
+        }
+    },
+    {
+        "model": "padarias.produto",
+        "pk": 24,
+        "fields": {
+            "nome": "Quibe",
+            "descricao": "Quibe assado saboroso.",
+            "preco": "4.50",
+            "categoria": 4
+        }
+    }
+]

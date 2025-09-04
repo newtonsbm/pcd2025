@@ -1,0 +1,62 @@
+[
+    {
+        "model": "padarias.padaria",
+        "pk": 1,
+        "fields": {
+            "nome": "Padaria Alegria",
+            "descricao": "A Padaria Alegria é conhecida por seus pães frescos e deliciosos. Nossos clientes adoram nossos croissants e baguetes. Temos uma grande variedade de doces e salgados. Venha nos visitar!",
+            "imagem": "padarias/padaria1.png",
+            "telefone": "16-99223-4455",
+            "email": "padaria.alegria@example.com",
+            "cestas": [1, 2, 3]
+        }
+    },
+    {
+        "model": "padarias.padaria",
+        "pk": 2,
+        "fields": {
+            "nome": "Padaria Sol Nascente",
+            "descricao": "Na Padaria Sol Nascente, começamos o dia cedo para trazer a você os melhores pães e doces. Nossos padeiros são especialistas em criar deliciosas iguarias. Oferecemos uma grande variedade de pães artesanais. Venha e experimente!",
+            "imagem": "padarias/padaria2.png",
+            "telefone": "16-99334-5566",
+            "cestas": [1, 2, 3],
+            "email": "padaria.solnascente@example.com"
+        }
+    },
+    {
+        "model": "padarias.padaria",
+        "pk": 3,
+        "fields": {
+            "nome": "Padaria Pão Quente",
+            "descricao": "A Padaria Pão Quente é o lugar perfeito para um café da manhã aconchegante. Nossos pães são feitos com os melhores ingredientes e muito amor. Temos uma grande variedade de doces para acompanhar seu café. Esperamos você!",
+            "imagem": "padarias/padaria3.png",
+            "telefone": "16-99445-6677",
+            "cestas": [1, 2, 3],
+            "email": "padaria.paoquente@example.com"
+        }
+    },
+    {
+        "model": "padarias.padaria",
+        "pk": 4,
+        "fields": {
+            "nome": "Padaria Doce Vida",
+            "descricao": "Na Padaria Doce Vida, acreditamos que um bom dia começa com um bom pão. Nossos pães são feitos com receitas tradicionais e ingredientes de alta qualidade. Oferecemos uma grande variedade de doces e salgados. Venha conferir!",
+            "imagem": "padarias/padaria2.png",
+            "telefone": "16-99556-7788",
+            "cestas": [1, 2],
+            "email": "padaria.docevida@example.com"
+        }
+    },
+    {
+        "model": "padarias.padaria",
+        "pk": 5,
+        "fields": {
+            "nome": "Padaria Bom Dia",
+            "descricao": "A Padaria Bom Dia é o lugar ideal para começar o seu dia. Nossos pães são feitos com amor e carinho. Temos uma grande variedade de doces para acompanhar seu café da manhã. Nossos pães e doces vão te surpreender!",
+            "imagem": "padarias/padaria3.png",
+            "telefone": "16-99667-8899",
+            "cestas": [1, 2],
+            "email": "padaria.bomdia@example.com"
+        }
+    }
+]

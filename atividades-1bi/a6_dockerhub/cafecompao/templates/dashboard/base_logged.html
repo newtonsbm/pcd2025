@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="flex min-h-[70vh] max-w-screen-xl mx-auto">
+    {% include 'components/left_menu.html' %}
+    <main class="flex-1 p-10">
+      {% block dashboard_content %}{% endblock %}
+    </main>
+  </div>
+{% endblock %}

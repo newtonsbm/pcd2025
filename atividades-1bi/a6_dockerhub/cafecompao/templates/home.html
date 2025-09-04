@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Café com Pão{% endblock %}
+
+{% block content %}
+<!-- INICIO DO HERO -->
+<div class="hero min-h-screen" style="background-image: url({% static 'images/padaria1.png' %});">
+  <div class="hero-overlay"></div>
+  <div class="hero-content text-neutral-content text-center">
+    <div class="max-w-2xl">
+      <h1 class="mb-5 text-5xl font-bold">Assine sua manhã perfeita!</h1>
+      <p class="mb-5 text-xl">
+        Comece suas manhãs com sabor e praticidade
+        <br>Assine o <strong>Café com Pão!</strong>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- FIM DO HERO -->
+<main class="max-w-4xl mx-auto my-10 prose">
+  <article class="flex gap-8 my-20">
+    <img src="{% static 'images/cesta2.png' %}" class="w-1/2" alt="">
+    <section class="prose">
+      <h2>Cestas com produtos perfeitos!</h2>
+      <p>Nosso compromisso com a qualidade e a conveniência torna cada entrega uma experiência única. Experimente o
+        que temos a oferecer</p>
+      <ul>
+        <li>Variedade premium</li>
+        <li>Personalização flexível</li>
+        <li>Entrega confiável</li>
+      </ul>
+    </section>
+  </article>
+  <blockquote class="w-3/4 mx-auto text-center my-20">
+    <p>
+      Adoro receber minha cesta de café da manhã do Café com Pão toda semana!
+      A variedade de itens frescos e a qualidade dos produtos superam minhas expectativas.
+      Começo cada manhã com um sorriso graças a essa delícia.
+      Recomendo a todos que buscam praticidade e sabor na primeira refeição do dia!
+    </p>
+    <cite>Maria da Silva</cite>
+  </blockquote>
+</main>
+{% endblock %}

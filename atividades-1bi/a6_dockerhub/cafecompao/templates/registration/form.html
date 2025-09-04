@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registrar - Café com Pão{% endblock %}
+
+{% block content %}
+  <!-- INICIO DO HERO -->
+  <div class="hero bg-base-200 min-h-screen">
+    <div class="hero-content flex-col gap-20 lg:flex-row">
+      <img src="{% static 'images/cafe3.png' %}" class="max-w-2xl rounded-lg shadow-2xl opacity-60" alt="">
+      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div class="card-body">
+          <h1 class="text-3xl font-bold my-8">Crie sua conta</h1>
+          <form method="post" class="space-y-4">
+            {% csrf_token %}
+            <fieldset class="fieldset">
+              <legend class="fieldset-legend">Email</legend>
+              <label class="input">
+                <i class="bi bi-envelope opacity-50"></i>
+                <input type="email" id="email" name="email" value="{{ email }}" required>
+              </label>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="fieldset-legend">Senha</legend>
+              <label class="input">
+                <i class="bi bi-lock opacity-50"></i>
+                <input type="password" id="password" name="password" required>
+              </label>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="fieldset-legend">Confirme a senha</legend>
+              <label class="input">
+                <i class="bi bi-lock-fill opacity-50"></i>
+                <input type="password" id="password_verification" name="password_verification" required>
+              </label>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="fieldset-legend">Nome</legend>
+              <label class="input">
+                <i class="bi bi-person-fill opacity-50"></i>
+                <input type="text" id="first_name" name="first_name" value="{{ first_name }}" required>
+              </label>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="fieldset-legend">Sobrenome</legend>
+              <label class="input">
+                <i class="bi bi-person-lines-fill opacity-50"></i>
+                <input type="text" id="last_name" name="last_name" value="{{ last_name }}" required>
+              </label>
+            </fieldset>
+            <div class="form-control mt-6">
+              <button type="submit" class="btn btn-primary">Registrar</button>
+              <a href="{% url 'login' %}" class="btn">Já tenho conta</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO HERO -->
+{% endblock %}

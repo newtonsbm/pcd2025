@@ -1,0 +1,38 @@
+[
+    {
+        "model": "padarias.cesta",
+        "pk": 1,
+        "fields": {
+            "nome": "Cesta Matinal Simples",
+            "descricao": "Cesta matinal com produtos essenciais.",
+            "preco": "80.00",
+            "nivel": "B",
+            "imagem": "cestas/cesta1.png",
+            "produtos": [1, 2, 3, 4, 5]
+        }
+    },
+    {
+        "model": "padarias.cesta",
+        "pk": 2,
+        "fields": {
+            "nome": "Cesta Dia a dia",
+            "descricao": "Cesta média com uma variedade de produtos.",
+            "preco": "160.00",
+            "nivel": "M",
+            "imagem": "cestas/cesta2.png",
+            "produtos": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        }
+    },
+    {
+        "model": "padarias.cesta",
+        "pk": 3,
+        "fields": {
+            "nome": "Cesta Premium Gourmet",
+            "descricao": "Cesta premium com produtos de alta qualidade.",
+            "preco": "400.00",
+            "nivel": "P",
+            "imagem": "cestas/cesta3.png",
+            "produtos": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+        }
+    }
+]

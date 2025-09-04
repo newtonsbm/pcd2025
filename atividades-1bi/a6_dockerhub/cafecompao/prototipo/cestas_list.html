@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café com Pão</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body data-theme="caramellatte">
+  <!-- INICIO DO NAVBAR SUPERIOR -->
+  <header class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <li><a href="home.html">Principal</a></li>
+          <li><a href="padarias_list.html">Padarias</a></li>
+          <li><a href="cestas_list.html">Cestas</a></li>
+          <li><a href="contato.html">Sobre Nós</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-xl"><i class="bi bi-cup-hot"></i> Café com Pão!</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="home.html">Principal</a></li>
+        <li><a href="padarias_list.html">Padarias</a></li>
+        <li><a href="cestas_list.html">Cestas</a></li>
+        <li><a href="contato.html">Sobre Nós</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="registration_login.html" class="btn">Entrar</a>
+    </div>
+  </header>
+  <!-- FIM DO NAVBAR SUPERIOR -->
+  <!-- INICIO DO HERO -->
+  <div class="hero min-h-[70vh]" style="background-image: url(images/padaria2.png);">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-2xl">
+        <h1 class="mb-5 text-5xl font-bold">Cestas íncriveis para TODOS os gostos!</h1>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO HERO -->
+  <!-- INICIO DO MAIN HOME -->
+  <main class="max-w-4xl mx-auto my-20">
+    <h1 class="text-4xl">Nossas Cestas</h1>
+    <section class="my-10 flex gap-5 flex-wrap justify-center">
+
+      <div class="card bg-base-100 w-70 shadow-sm">
+        <figure>
+          <img class="aspect-video"  src="images/cesta.png" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Cesta Matinal Simples</h2>
+          <p>Desperte suas manhãs com a Cesta Matinal Simples do Café com Pão. Uma seleção cuidadosa de pães frescos,
+            geleias artesanais e um café especial para iniciar o dia com simplicidade e sabor.</p>
+          <div class="card-actions justify-end">
+            <a href="cestas_detail.html" class="btn btn-primary">Ver mais</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 w-70 shadow-sm">
+        <figure>
+          <img class="aspect-video" src="images/cesta2.png" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Cesta do Dia a Dia</h2>
+          <p>Desperte suas manhãs com a Cesta Matinal Simples do Café com Pão. Uma seleção cuidadosa de pães frescos,
+            geleias artesanais e um café especial para iniciar o dia com simplicidade e sabor.</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Ver mais</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 w-70 shadow-sm">
+        <figure>
+          <img class="aspect-video" src="images/cesta3.png" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Cesta Top</h2>
+          <p>Desperte suas manhãs com a Cesta Matinal Simples do Café com Pão. Uma seleção cuidadosa de pães frescos, geleias artesanais e um café especial para iniciar o dia com simplicidade e sabor.</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Ver mais</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <!-- FIM DO MAIN HOME -->
+  <!-- INICIO DO FOOTER  -->
+  <footer class="footer footer-horizontal footer-center bg-primary text-primary-content p-10">
+    <div>
+      <i class="bi bi-cup-hot-fill text-4xl"></i>
+      <p class="font-bold">
+        CAFÉ COM PÃO
+      </p>
+    </div>
+    <div class="w-full border-t-2 border-secondary pt-4">
+      <div class="text-4xl flex gap-10 mb-4">
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <p>Copyright - Ribeirão Preto</p>
+    </div>
+  </footer>
+  <!-- FIM DO FOOTER -->
+</body>
+
+</html>

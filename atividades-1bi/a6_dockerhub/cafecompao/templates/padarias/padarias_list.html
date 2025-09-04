@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <!-- INICIO DO HERO -->
+  <div class="hero min-h-[70vh]" style="background-image: url({% static 'images/padaria2.png' %});">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-2xl">
+        <h1 class="mb-5 text-5xl font-bold">Conheça nossa rede de Padarias!</h1>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO HERO -->
+  <!-- INICIO DO MAIN HOME -->
+  <main class="max-w-4xl mx-auto my-20 p-2">
+    <h1 class="text-4xl">Padarias Conveniadas</h1>
+    <section class="my-10 flex flex-col gap-10 ">
+
+      <div class="card lg:card-side bg-base-100 shadow-sm">
+        <figure class="lg:w-1/2">
+          <img class="aspect-video" src="{% static 'images/padaria1.png' %}" />
+        </figure>
+        <div class="card-body lg:w-1/2">
+          <h2 class="card-title">Pão & Aroma Todo Dia</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus facilis nesciunt, iure sit hic magni architecto cum, dolorem enim, optio quo sunt blanditiis quia ad eaque? Ab architecto autem saepe!</p>
+          <ul>
+            <li><i class="bi bi-map"></i> Ribeirão Preto / SP</li>
+            <li><i class="bi bi-envelope"></i> padariabela@gmail.com </li>
+            <li><i class="bi bi-phone"></i> 16-99223-4455</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="card lg:card-side bg-base-100 shadow-sm">
+        <figure class="lg:w-1/2">
+          <img class="aspect-video" src="{% static 'images/padaria2.png' %}" />
+        </figure>
+        <div class="card-body lg:w-1/2">
+          <h2 class="card-title">Pão & Aroma Todo Dia</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus facilis nesciunt, iure sit hic magni architecto cum, dolorem enim, optio quo sunt blanditiis quia ad eaque? Ab architecto autem saepe!</p>
+          <ul>
+            <li><i class="bi bi-map"></i> Ribeirão Preto / SP</li>
+            <li><i class="bi bi-envelope"></i> padariabela@gmail.com </li>
+            <li><i class="bi bi-phone"></i> 16-99223-4455</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="card lg:card-side bg-base-100 shadow-sm">
+        <figure class="lg:w-1/2">
+          <img class="aspect-video" src="{% static 'images/padaria3.png' %}" />
+        </figure>
+        <div class="card-body lg:w-1/2">
+          <h2 class="card-title">Pão & Aroma Todo Dia</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus facilis nesciunt, iure sit hic magni architecto cum, dolorem enim, optio quo sunt blanditiis quia ad eaque? Ab architecto autem saepe!</p>
+          <ul>
+            <li><i class="bi bi-map"></i> Ribeirão Preto / SP</li>
+            <li><i class="bi bi-envelope"></i> padariabela@gmail.com </li>
+            <li><i class="bi bi-phone"></i> 16-99223-4455</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="card lg:card-side bg-base-100 shadow-sm">
+        <figure class="lg:w-1/2">
+          <img class="aspect-video" src="{% static 'images/padaria1.png' %}" />
+        </figure>
+        <div class="card-body lg:w-1/2">
+          <h2 class="card-title">Pão & Aroma Todo Dia</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus facilis nesciunt, iure sit hic magni architecto cum, dolorem enim, optio quo sunt blanditiis quia ad eaque? Ab architecto autem saepe!</p>
+          <ul>
+            <li><i class="bi bi-map"></i> Ribeirão Preto / SP</li>
+            <li><i class="bi bi-envelope"></i> padariabela@gmail.com </li>
+            <li><i class="bi bi-phone"></i> 16-99223-4455</li>
+          </ul>
+        </div>
+      </div>
+
+  </main>
+  <!-- FIM DO MAIN HOME -->
+  
+{% endblock %}

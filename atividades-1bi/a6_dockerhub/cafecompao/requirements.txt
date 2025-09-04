@@ -1,0 +1,4 @@
+django
+django-browser-reload
+pillow
+psycopg2-binary

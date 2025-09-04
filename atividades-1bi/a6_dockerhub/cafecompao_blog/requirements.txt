@@ -1,0 +1,4 @@
+pelican[markdown]
+pelican-image-process
+pelican-seo
+git+https://github.com/arulrajnet/attila.git@master
