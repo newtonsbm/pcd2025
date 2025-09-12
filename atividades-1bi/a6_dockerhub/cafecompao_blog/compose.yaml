@@ -1,6 +1,7 @@
 services:
   cafeblog:
     build: .
+    image: newtonsbm/cafeteste:light
     ports:
       - 8080:80
 
