@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package notification;
+
+service NotificationService {
+  rpc NotificarPagamento (PaymentRequest) returns (PaymentResponse);
+}
+
+message PaymentRequest {
+  string client = 1;
+  string product = 2;
+  string payment_status = 3;
+  float cost = 4;
+}
+
+message PaymentResponse {
+  string message = 1;
+}

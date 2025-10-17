@@ -1,0 +1,22 @@
+services:
+  notification_service:
+    build: ./notification_service
+    working_dir: /app
+    volumes:
+      - ./notification_service:/app
+    ports:
+      - "8081:8081"
+    tty: true
+    command: python -u server.py
+
+  payment_service:
+    build: ./payment_service
+    working_dir: /app  
+    environment:
+      NOTIFICATION_SERVICE_HOST: notification_service
+      NOTIFICATION_SERVICE_PORT: 8081
+    tty: true
+    volumes:
+      - ./payment_service:/app
+    command: python -u main.py
+

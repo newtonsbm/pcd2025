@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+    rpyc_classic_server:
+        build: ./server 
+        ports: 
+            - "18812:18812"
+    rpyc_classic_client:
+        build: ./client
+        volumes:
+            - "./client/:/code"
+        depends_on:
+            - "rpyc_classic_server"
