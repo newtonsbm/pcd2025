@@ -29,5 +29,8 @@ docker compose run payment_service python -m grpc_tools.protoc -I. --python_out=
 docker compose run notification_service python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. notification.proto
 ```
 
+docker compose up notification_service
+docker compose up payment_service
+
 3. Implementar o servidor gRPC.
 4. Implementar o cliente gRPC (opcional).
