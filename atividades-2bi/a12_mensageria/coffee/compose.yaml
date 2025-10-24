@@ -21,16 +21,6 @@ services:
         command: sh -c 'python -u main.py'
         environment:
             AMQP_URL: amqp://guest:guest@rabbit:5672
-    notas:
-        build: ./notas
-        volumes:
-            - "./notas/:/code"
-        depends_on:
-            rabbit:
-                condition: service_healthy
-        command: sh -c 'python -u main.py'
-        environment:
-            AMQP_URL: amqp://guest:guest@rabbit:5672
     whatsapp:
         build: ./whatsapp
         volumes:

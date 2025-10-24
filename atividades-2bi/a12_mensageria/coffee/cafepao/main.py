@@ -34,10 +34,6 @@ def entregar_pedido(channel, pedido):
     # direct - pipeline
     channel.basic_publish(exchange='', routing_key='entregas', body=json.dumps(pedido))
 
-def gerar_nota(channel, pedido):
-    # direct only
-    channel.basic_publish(exchange='', routing_key='notas', body=json.dumps(pedido))
-
 def main():
     print("Iniciando sistema café com pão...")
     channel = rabbit_config()
@@ -46,7 +42,6 @@ def main():
         novo_pedido = gerar_pedido(id)
         notificar_pedido(channel, novo_pedido)
         entregar_pedido(channel, novo_pedido)
-        gerar_nota(channel, novo_pedido)
         time.sleep(3)
         id += 1
 
