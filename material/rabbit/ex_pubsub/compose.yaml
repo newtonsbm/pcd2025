@@ -1,0 +1,95 @@
+services:
+  # Servidor RabbitMQ
+  rabbit:
+    image: rabbitmq:3-management-alpine
+    container_name: pizzaria-rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "5672:5672"    # Porta AMQP
+      - "8080:15672"   # Interface de gerenciamento
+    networks:
+      - pizzaria-network
+  
+  # Publisher: Sistema de Pedidos
+  publisher:
+    build: ./publisher
+    container_name: pizzaria-pedidos
+    volumes:
+      - "./publisher:/code"
+    depends_on:
+      rabbit:
+        condition: service_healthy
+    environment:
+      RABBIT_HOST: rabbit
+    networks:
+      - pizzaria-network
+    restart: on-failure
+  
+  # Subscriber 1: Cozinha
+  cozinha:
+    build: ./cozinha
+    container_name: pizzaria-cozinha
+    volumes:
+      - "./cozinha:/code"
+    depends_on:
+      rabbit:
+        condition: service_healthy
+    environment:
+      RABBIT_HOST: rabbit
+    networks:
+      - pizzaria-network
+    restart: on-failure
+  
+  # Subscriber 2: Entregadores
+  entregador:
+    build: ./entregador
+    container_name: pizzaria-entregador
+    volumes:
+      - "./entregador:/code"
+    depends_on:
+      rabbit:
+        condition: service_healthy
+    environment:
+      RABBIT_HOST: rabbit
+    networks:
+      - pizzaria-network
+    restart: on-failure
+  
+  # Subscriber 3: App de Notificações
+  app:
+    build: ./app
+    container_name: pizzaria-app
+    volumes:
+      - "./app:/code"
+    depends_on:
+      rabbit:
+        condition: service_healthy
+    environment:
+      RABBIT_HOST: rabbit
+    networks:
+      - pizzaria-network
+    restart: on-failure
+  
+  # Subscriber 4: Financeiro
+  financeiro:
+    build: ./financeiro
+    container_name: pizzaria-financeiro
+    volumes:
+      - "./financeiro:/code"
+    depends_on:
+      rabbit:
+        condition: service_healthy
+    environment:
+      RABBIT_HOST: rabbit
+    networks:
+      - pizzaria-network
+    restart: on-failure
+
+networks:
+  pizzaria-network:
+    driver: bridge
+
