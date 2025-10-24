@@ -48,7 +48,7 @@ services:
         depends_on:
             rabbit:
                 condition: service_healthy
-        command: sh -c 'python -u main.py'
+        command: sh -c 'python -u main_v2.py'
         deploy:
             mode: replicated
             replicas: 3

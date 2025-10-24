@@ -17,6 +17,7 @@ def rabbit_config():
         pika.ConnectionParameters(host=HOST))
     channel = connection.channel()
     channel.queue_declare(queue='entregas')
+    channel.basic_qos(prefetch_count=1)
     return channel
 
 def realizar_entrega(channel, method, properties, body):
@@ -26,6 +27,8 @@ def realizar_entrega(channel, method, properties, body):
     tempo_entrega = pedido['tempo']
     time.sleep(tempo_entrega)
     print(f"Entregador(a) {nome} retornou") 
+    channel.basic_ack(delivery_tag=method.delivery_tag)
+
     
 
 def main():

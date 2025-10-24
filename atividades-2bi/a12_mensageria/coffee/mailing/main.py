@@ -16,15 +16,17 @@ def rabbit_config():
     return channel
 
 def enviar_email(channel, method, properties, body):
-    tempo_envio = random.randint(1, 5)
+    tempo_envio = random.randint(3, 5)
     time.sleep(tempo_envio)
     pedido = json.loads(body)
     print(f"Enviando email para pedido {pedido['id']}")
+    channel.basic_ack(delivery_tag=method.delivery_tag)
+
 
 def main():
     print("Iniciando serviço de mailing...")
     channel = rabbit_config()
-    channel.basic_consume(queue='mailing', on_message_callback=enviar_email, auto_ack=True)
+    channel.basic_consume(queue='mailing', on_message_callback=enviar_email, auto_ack=False)
     channel.start_consuming()
 
 

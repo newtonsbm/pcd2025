@@ -16,7 +16,7 @@ def rabbit_config():
     return channel
 
 def enviar_whatsapp(channel, method, properties, body):
-    tempo_envio = random.randint(0, 3)
+    tempo_envio = random.randint(1, 5)
     time.sleep(tempo_envio)
     pedido = json.loads(body)
     print(f"WhatsApp enviado - pedido {pedido['id']}")

@@ -42,7 +42,7 @@ def main():
         novo_pedido = gerar_pedido(id)
         notificar_pedido(channel, novo_pedido)
         entregar_pedido(channel, novo_pedido)
-        time.sleep(3)
+        time.sleep(2)
         id += 1
 
 if __name__ == '__main__':
