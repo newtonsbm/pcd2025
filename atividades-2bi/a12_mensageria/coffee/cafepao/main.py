@@ -12,7 +12,6 @@ def rabbit_config():
         pika.ConnectionParameters(host=HOST))
     channel = connection.channel()
     channel.exchange_declare(exchange='notificacoes', exchange_type='fanout')
-    channel.queue_declare(queue='notas') 
     channel.queue_declare(queue='entregas') 
     return channel
 
